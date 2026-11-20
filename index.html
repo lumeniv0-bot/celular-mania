@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Celular Mania</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--bg:#070b2a;--card:#0d1442;--line:#2b3cff;--yellow:#ffe600;--red:#e5121b;--green:#22e05a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#fff;font-family:"Trebuchet MS",Arial,sans-serif;padding-bottom:110px;background-image:radial-gradient(circle at 10% 0,#5b1fd6 0,transparent 40%),radial-gradient(circle at 100% 30%,#1d4dff 0,transparent 40%)}
+h2,h3{font-family:Impact,"Arial Black",sans-serif;margin:0}
+.wrap{max-width:560px;margin:0 auto;padding:16px}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:8px;font:900 22px Impact,"Arial Black",sans-serif}
+.brand b{color:#38bdf8}
+.brand svg{width:40px;height:40px}
+.status{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;background:#000a;border:2px solid #fff3;font-weight:700;font-size:14px}
+.led{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 12px 3px var(--red)}
+.status.open .led{background:var(--green);box-shadow:0 0 12px 3px var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.6}}
+.cover{display:block;width:100%;max-width:560px;margin:12px auto 0}
+section{margin-top:28px}
+h2{font-size:30px;text-align:center;margin-bottom:14px}
+details{background:#0d1442;border:2px solid #2b3cff88;border-radius:16px;margin-bottom:10px;padding:0 16px}
+summary{cursor:pointer;padding:14px 0;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--yellow);font-size:22px}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 14px;line-height:1.5;color:#dfe4ff}
+.panel{background:#0d1442cc;border:2px solid var(--line);border-radius:26px;padding:16px;display:grid;gap:14px;justify-items:center}
+#qr{background:#fff;padding:10px;border-radius:14px;min-height:140px;min-width:140px}
+.row{display:flex;gap:8px;width:100%}
+.row input{flex:1;min-width:0;background:#000a;border:2px solid var(--line);color:#fff;border-radius:12px;padding:10px;font-size:14px}
+.btn{border:0;border-radius:12px;padding:10px 16px;font-weight:800;color:#fff;background:linear-gradient(90deg,#ff2a2a,#b30009);font-size:15px}
+.btn.alt{background:linear-gradient(90deg,#2b3cff,#9b3cff)}
+.dock{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:12px;padding:12px;background:linear-gradient(transparent,#070b2a 35%)}
+.dock a,.dock button{width:54px;height:54px;border-radius:50%;border:2px solid #fff5;display:grid;place-items:center;color:#fff;padding:0;box-shadow:0 0 16px var(--c);background:var(--c)}
+.dock svg{width:28px;height:28px;fill:currentColor}
+.wa{--c:#14b84a}.tel{--c:#2b6bff}.ig{--c:#d62976}.mail{--c:#e5121b}.hr{--c:#9b3cff}.loc{--c:#f59e0b}
